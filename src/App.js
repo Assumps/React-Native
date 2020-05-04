@@ -32,7 +32,7 @@ export default function App() {
 
     const repositoriesAtt = repositories.map(repository => {
       if (repository.id === id){
-        return repositoryLiked;
+        return { ...repository,  ...repositoryLiked };
       } else {
         return repository;
       }
